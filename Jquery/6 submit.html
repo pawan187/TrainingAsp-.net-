@@ -1,0 +1,23 @@
+<html>
+<head>
+    <script src="jquery-3.5.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("form").submit(function () {
+                var fn = document.getElementById("fname").value;
+                var ln = document.getElementById("lname").value;
+                alert("Welcome :" + fn + " " + ln);
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        first name:<input type="text" id="fname" value="Pritesh"> <br>
+        Last name: <input type="text" id="lname" value="Mishra"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+

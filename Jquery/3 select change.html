@@ -1,0 +1,30 @@
+<html>
+<head>
+    <script src="jquery-3.5.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#sel").change(function () {
+                alert("Option changed...");
+            });
+            $("#txtfname").select(function () {
+                var fname = document.getElementById("txtfname").value;
+                alert(fname);
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        State: <select id="sel" placeholder="Select state">
+            <option> Gujarat</option>
+            <option> Maharastra</option>
+            <option> Rajasthan</option>
+        </select>
+        <br>
+        First Name: <input type="text" id="txtfname"><br>
+        Last Name:<input type="text" id="txtlname">
+    </form>
+</body>
+</html>
+

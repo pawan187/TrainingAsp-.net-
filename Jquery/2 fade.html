@@ -1,0 +1,59 @@
+<html>
+<head>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#p1").fadeOut(2000);
+            });
+            $("#btn2").click(function () {
+                $("#p1").fadeIn(2000);
+            });
+            $("#btn3").click(function () {
+                $("#d1,#p1").fadeTo(400, 0.3, function () {
+                    alert("FadeTo called.");
+                });
+            });
+            $("button").click(function () {
+                $("#div1").fadeToggle();
+                $("#div2").fadeToggle("slow");
+                $("#div3").fadeToggle(3000);
+            });
+        });
+    </script>
+    <style>
+        .c1 {
+            border: 5px solid red;
+            background-color: blue;
+            height: 20%;
+            width: 20%;
+        }
+
+        .p1 {
+            color: red;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="c1" id="d1">
+        This is DIV Tag
+    </div>
+    <p class="p1" id="p1"> This is Paragraph.</p>
+    <input type="button" id="btn1" value="Fade Out">
+    <input type="button" id="btn2" value="Fade In">
+    <input type="button" id="btn3" value="Fade To">
+
+    <hr />
+    <p>Demonstrate fadeToggle() with different speed parameters.</p>
+
+    <button>Click to fade in/out boxes</button><br><br>
+
+    <div id="div1" style="width:80px;height:80px;background-color:red;"></div>
+    <br>
+    <div id="div2" style="width:80px;height:80px;background-color:green;"></div>
+    <br>
+    <div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
+</body>
+</html>
+

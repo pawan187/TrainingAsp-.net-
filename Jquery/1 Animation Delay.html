@@ -1,0 +1,73 @@
+<html>
+<head>
+    <script src="jquery-3.5.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#div1").animate({ height: 100 }, "slow");
+                $("#div1").animate({ width: 1000 }, "slow");
+                $("#div2").animate({ height: 100 }, "fast");
+                $("#div2").animate({ width: 1000 }, "fast");
+                $("#div3").animate({ height: 100 }, 5000, "swing");
+                $("#div3").animate({ width: 1000 }, 5000, "swing");
+                $("#div1").animate({ marginLeft: 60, marginTop: 60 }, 2000, "swing", function () {
+                    alert("Amination Completed...");
+                    $("#div1").css("background-color", "blue");
+                    $("#div1").animate({ opacity: 0 }, 5000);
+                });
+            });
+            $("#btn2").click(function () {
+                $("#div1").animate({ height: "-30", width: "-30" }, 3000);
+                //$("#div1").animate({ height: "+=60px", width: "+=60px" }, 3000);
+            });
+            $("#btn3").click(function () {
+                $("#div1").animate({ height: 100, width: 100, opacity: 0 }, 3000);
+                $("#div1").animate({ height: 100, width: 100, opacity: 1 }, 3000);
+
+            });
+            $("#btn4").click(function () {
+                $("#div1").animate({ marginLeft: 50, marginTop: 50, opacity: 0.5 }, 5000);
+            });
+            $("#btn5").click(function () {
+                $("#div1").delay(3000);
+                $("#div1").animate({ marginLeft: 100, marginTop: 300 });
+                //$("#div1").delay(3000).animate({ marginLeft: 100, marginTop: 300 });
+            });
+        });
+
+    </script>
+    <style>
+        .c1 {
+            height: 30px;
+            width: 30px;
+            background-color: red;
+            border: 1px solid blue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="c1" id="div1">
+    </div>
+    <br />
+    <div class="c1" id="div2">
+    </div>
+    <br />
+    <div class="c1" id="div3">
+    </div>
+    <br />
+    <input type="button" id="btn1" value="Zoom In">
+    <br />
+    <input type="button" id="btn2" value="Zoom Out">
+    <br />
+    <input type="button" id="btn3" value="Opacity">
+    <br />
+    <input type="button" id="btn4" value="Move">
+    <br />
+    <input type="button" id="btn5" value="Delay">
+</body>
+
+</html>
+

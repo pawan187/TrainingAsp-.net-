@@ -1,0 +1,45 @@
+<html>
+<head>
+    <script src="jquery-3.5.1.min.js">
+    </script>
+    <script>
+        var t = 0;
+        $(document).ready(function () {
+            $("div").scroll(function () {
+                $("span").text(t += 1);
+            });
+
+        });
+    </script>
+    <style>
+        .c1 {
+            border: 1px solid red;
+            height: 30%;
+            width: 20%;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="c1">
+        <h2>What is jQuery?</h2>
+        <p>jQuery is a lightweight, "write less, do more", JavaScript library.</p>
+        <p>The purpose of jQuery is to make it much easier to use JavaScript on your website.</p>
+        <p>
+            jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish,
+            and wraps them into methods that you can call with a single line of code.
+        </p>
+        <p>The jQuery library contains the following features:</p>
+        <ul>
+            <li>HTML/DOM manipulation</li>
+            <li>CSS manipulation</li>
+            <li>HTML event methods</li>
+            <li>Effects and animations</li>
+            <li>AJAX</li>
+            <li>Utilities</li>
+        </ul>
+    </div>
+    Scroll : <span>0</span>
+</body>
+</html>
+

@@ -1,0 +1,22 @@
+<html>
+<head>
+    <script src="jquery-3.5.1.min.js">
+    </script>
+    <script>
+        x = 0;
+        $(document).ready(function () {
+            $(window).resize(function () {
+                $("#w").text(x += 1);
+            });
+            $("#te").resize(function () {
+                $("#t").text(t += 1);
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>Window resized <span id="w">0</span> times.</p>
+    <p>Try resizing your browser window.</p>
+</body>
+</html>
+

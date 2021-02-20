@@ -1,0 +1,43 @@
+<html>
+<head>
+    <script src="jquery-3.5.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("input").focus(function () {
+                $("input").css("background-color", "blue");
+            });
+            $("input").blur(function () {
+                $("input").css("background-color", "red");
+            });
+            //$("#fname").select(function () {
+            //    var n = document.getElementById("fname").value;
+            //    alert("Selected" + n);
+            //});
+            //$("#se").change(function () {
+            //    alert("Option Changed...");
+            //});
+            //$("form").submit(function () {
+            //    var f = document.getElementById("fname").value;
+            //    var l = document.getElementById("lname").value;
+            //    alert("Welcome " + f + " " + l);
+            //});
+        });
+    </script>
+</head>
+<body>
+    <form>
+        First name:<input type="text" id="fname"> <br>
+        Last name: <input type="text" id="lname"><br>
+        User name: <input type="text" ><br>
+        Password : <input type="password"><br>
+        Country :<select id="se">
+            <option>India</option>
+            <option>USA</option>
+            <option>UK</option>
+            <option>Nepal</option>
+        </select>
+        <input type="Submit" id="btnsubmit">
+    </form>
+</body>
+</html>

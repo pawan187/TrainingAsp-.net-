@@ -1,0 +1,44 @@
+<html>
+<head>
+    <script src="jquery-3.5.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            a = 0, b = 0, c = 0, d = 0, e = 0;
+            $("div").mousemove(function () {
+                $("#a1").text(a += 1);
+            });
+            $("div").mouseover(function () {
+                $("#b1").text(b += 1);
+            });
+            $("div").mouseout(function () {
+                $("#c1").text(c += 1);
+            });
+            $("div").mousedown(function () {
+                $("#d1").text(d += 1);
+            });
+            $("div").mouseup(function () {
+                $("#e1").text(e += 1);
+            });
+        });
+    </script>
+    <style>
+        .c1 {
+            height: 20%;
+            width: 20%;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="c1">
+        <p> This is paragraph.</p>
+    </div>
+    <h2> Mouse Moved: <span id="a1">0</span> </h2>
+    <h2> Mouse Over: <span id="b1">0</span> </h2>
+    <h2> Mouse Out: <span id="c1">0</span> </h2>
+    <h2> Mouse Down: <span id="d1">0</span> </h2>
+    <h2> Mouse Up: <span id="e1">0</span> </h2>
+</body>
+</html>
+
